@@ -1,0 +1,18 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "release/*"
+      ],
+      "message": "chore(release): publish %s"
+    }
+  }
+}
