@@ -1,14 +1,14 @@
 {
   "name": "@evo/eslint-config-ng-templates",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
     "publish:private": "npm publish --registry http://npm.market.local"
   },
   "main": "index.js",
   "peerDependencies": {
-    "typescript": ">= 4",
     "@angular-eslint/template-parser": ">= 12",
-    "eslint": ">= 8"
+    "eslint": ">= 8",
+    "typescript": ">= 4"
   }
 }

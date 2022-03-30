@@ -1,6 +1,6 @@
 {
   "name": "@evo/stylelint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
     "publish:private": "npm publish --registry http://npm.market.local"
@@ -12,7 +12,5 @@
     "stylelint-config-standard": "24.0.0",
     "stylelint-order": "5.0.0",
     "stylelint-scss": "4.1.0"
-  },
-  "dependencies": {
   }
 }
