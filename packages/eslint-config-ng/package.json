@@ -1,13 +1,12 @@
 {
   "name": "@evo/eslint-config-ng",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
     "publish:private": "npm publish --registry http://npm.market.local"
   },
   "main": "index.js",
   "peerDependencies": {
-    "typescript": ">= 4",
     "@angular-eslint/builder": ">= 12",
     "@angular-eslint/eslint-plugin": ">= 12",
     "@angular-eslint/eslint-plugin-template": ">= 12",
@@ -20,6 +19,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsdoc": "^37.7.0",
     "eslint-plugin-prefer-arrow": "1.2.2",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "typescript": ">= 4"
   }
 }
