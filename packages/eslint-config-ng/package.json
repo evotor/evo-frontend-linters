@@ -1,6 +1,6 @@
 {
   "name": "@evo/eslint-config-ng",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {},
   "main": "index.js",
   "peerDependencies": {
