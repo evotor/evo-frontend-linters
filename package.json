@@ -1,10 +1,6 @@
 {
   "name": "evo-frontend-linters",
   "scripts": {
-    "release": "./node_modules/.bin/semantic-release",
-    "publish:angular": "cd packages/eslint-config-ng && npm publish --registry http://npm.market.local && cd ..",
-    "publish:angular-template": "cd packages/eslint-config-ng-templates && npm publish --registry http://npm.market.local && cd ..",
-    "semantic-release": "semantic-release",
     "prepare": "husky install"
   },
   "private": true,
@@ -43,8 +39,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.2",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
-    "lerna": "^4.0.0",
-    "semantic-release": "^19.0.2"
+    "lerna": "^4.0.0"
   },
   "version": "0.0.0-development",
   "repository": {
