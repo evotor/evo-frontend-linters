@@ -30,4 +30,7 @@ module.exports = {
 
 ## Contributing
 
-... 
+1. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) wisely
+2. Use feature branches and make PRs with your changes
+3. After code review merge PR to master
+4. Run `lerna publish` to publish new versions of all changed packages
