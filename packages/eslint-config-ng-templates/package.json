@@ -10,5 +10,6 @@
     "@angular-eslint/template-parser": ">= 12",
     "eslint": ">= 8",
     "typescript": ">= 4"
-  }
+  },
+  "private": true
 }
