@@ -1,6 +1,6 @@
 {
   "name": "@evo/eslint-config-ng",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
     "publish:private": "npm publish --registry http://npm.market.local"
