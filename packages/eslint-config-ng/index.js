@@ -2,49 +2,73 @@ module.exports = {
     "overrides": [
         {
             "files": ["*.ts"],
+            "env": {
+                "es6": true,
+                "browser": true,
+                "node": true
+            },
+            "parserOptions": {
+                "ecmaVersion": 2020,
+                "sourceType": "module",
+                "project": ["./tsconfig.eslint.json"],
+                "createDefaultProgram": true
+            },
             "extends": [
                 "plugin:@angular-eslint/recommended",
                 // This is required if you use inline templates in Components
                 "plugin:@angular-eslint/template/process-inline-templates",
-                "plugin:@angular-eslint/ng-cli-compat",
-                "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
-                "eslint-config-prettier",
             ],
             "rules": {
                 // basic
                 "no-debugger": "off",
                 "no-underscore-dangle": "off",
                 "no-param-reassign": "off",
-                "no-case-declarations": "error",
-                "no-console": ["error", {allow: ["info", "assert", "warn", "error"]}],
-
-                // basic typescript
-                "function-paren-newline": ["error", "multiline-arguments"],
-                "object-curly-spacing": ["error", "never"],
-                "array-bracket-spacing": ["error", "never"],
-
-                "no-useless-constructor": "off",
-                "@typescript-eslint/no-useless-constructor": ["error"],
-                "@typescript-eslint/no-inferrable-types": [
-                    "error",
-                    {ignoreParameters: true},
+                "no-case-declarations": "warn",
+                "no-console": [
+                    "warn",
+                    {
+                        "allow": ["info", "assert", "warn", "error"]
+                    }
                 ],
-                "@typescript-eslint/prefer-readonly": ["error"],
+                // basic typescript
+                "arrow-parens": "error",
+                "function-paren-newline": ["warn", "multiline-arguments"],
+                "object-curly-spacing": ["warn", "never"],
+                "array-bracket-spacing": ["warn", "never"],
+                "no-useless-constructor": "off",
+                "@typescript-eslint/no-useless-constructor": ["warn"],
+                "@typescript-eslint/no-inferrable-types": [
+                    "warn",
+                    {
+                        "ignoreParameters": true
+                    }
+                ],
+                "@typescript-eslint/prefer-readonly": ["warn"],
+                "@typescript-eslint/explicit-function-return-type": ["warn", {
+                    "allowExpressions": true,
+                    "allowTypedFunctionExpressions": false,
+                    "allowHigherOrderFunctions": false,
+                    "allowDirectConstAssertionInArrowFunctions": true,
+                    "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+                }],
                 "@typescript-eslint/explicit-member-accessibility": [
-                    "error",
-                    {accessibility: "no-public"},
+                    "warn",
+                    {
+                        "accessibility": "no-public"
+                    }
                 ],
                 "no-unused-vars": "off",
                 "@typescript-eslint/no-unused-vars": [
-                    "error",
-                    {argsIgnorePattern: "^_"},
+                    "warn",
+                    {
+                        "argsIgnorePattern": "^_"
+                    }
                 ],
-
                 // member ordering
                 "@typescript-eslint/member-ordering": [
-                    "error",
+                    "warn",
                     {
-                        default: [
+                        "default": [
                             "signature",
                             /**
                              * static fields
@@ -53,7 +77,6 @@ module.exports = {
                             "public-static-field",
                             "protected-static-field",
                             "private-static-field",
-
                             /**
                              * abstract fields
                              * [sort: public -> protected -> private]
@@ -61,19 +84,13 @@ module.exports = {
                             "public-abstract-field",
                             "protected-abstract-field",
                             "private-abstract-field",
-
                             /**
                              * instance fields
                              * [sort: public -> private -> protected]
-                             * [sort: decorated -> non-decorated]
                              **/
-                            "public-decorated-field",
                             "public-instance-field",
-                            "private-decorated-field",
                             "private-instance-field",
-                            "protected-decorated-field",
                             "protected-instance-field",
-
                             /**
                              * constructors
                              * [sort: public -> protected -> private]
@@ -81,7 +98,6 @@ module.exports = {
                             "public-constructor",
                             "protected-constructor",
                             "private-constructor",
-
                             /**
                              * static methods
                              * [sort: public -> protected -> private]
@@ -89,53 +105,42 @@ module.exports = {
                             "public-static-method",
                             "protected-static-method",
                             "private-static-method",
-
-                            /**
-                             * abstract
-                             * [sort: public -> private -> protected]
-                             **/
-                            "public-abstract-get",
-                            "public-abstract-set",
-                            "protected-abstract-get",
-                            "protected-abstract-set",
-                            "private-abstract-get",
-                            "private-abstract-set",
-                            "public-abstract-method",
-                            "protected-abstract-method",
-                            "private-abstract-method",
-
                             /**
                              * methods
                              * [sort: public -> protected -> private]
-                             * [sort: decorated -> non-decorated]
                              **/
-                            "public-decorated-method",
                             "public-instance-method",
-                            "protected-decorated-method",
                             "protected-instance-method",
-                            "private-decorated-method",
-                            "private-instance-method",
-                        ],
-                    },
+                            "private-instance-method"
+                        ]
+                    }
                 ],
-
                 // angular rules
+                "@angular-eslint/no-input-rename": "off",
+                "@angular-eslint/no-output-native": "warn",
+                "@angular-eslint/no-output-on-prefix": "warn",
+                "@angular-eslint/no-empty-lifecycle-method": "warn",
                 "@angular-eslint/directive-selector": [
-                    "error",
-                    {"type": "attribute", "style": "camelCase"}
+                    "warn",
+                    {
+                        "type": "attribute",
+                        "style": "camelCase"
+                    }
                 ],
                 "@angular-eslint/component-selector": [
-                    "error",
-                    {"type": "element", "style": "kebab-case"}
+                    "warn",
+                    {
+                        "type": "element",
+                        "style": "kebab-case"
+                    }
                 ],
-
                 // naming conventions
                 "camelcase": "off",
                 "@typescript-eslint/naming-convention": [
-                    "error",
+                    "warn",
                     {
-                        selector: "default",
-                        format: ["camelCase"]
+                        "selector": "default",
+                        "format": ["camelCase"]
                     },
                     /**
                      * Class properties
@@ -146,9 +151,9 @@ module.exports = {
                      * readonly INPUT_MASKS = INPUT_MASKS;
                      */
                     {
-                        selector: "classProperty",
-                        modifiers: ["readonly", "public"],
-                        format: ["camelCase", "UPPER_CASE"],
+                        "selector": "classProperty",
+                        "modifiers": ["readonly", "public"],
+                        "format": ["camelCase", "UPPER_CASE"]
                     },
                     /**
                      * Class properties and methods
@@ -156,10 +161,10 @@ module.exports = {
                      * Allow underscore for PRIVATE members
                      */
                     {
-                        selector: "memberLike",
-                        modifiers: ["private"],
-                        format: ["camelCase"],
-                        leadingUnderscore: "allow",
+                        "selector": "memberLike",
+                        "modifiers": ["private"],
+                        "format": ["camelCase"],
+                        "leadingUnderscore": "allow"
                     },
                     /**
                      * Class properties and methods
@@ -167,27 +172,27 @@ module.exports = {
                      * Allow underscore for PROTECTED members
                      */
                     {
-                        selector: "memberLike",
-                        modifiers: ["protected"],
-                        format: ["camelCase"],
-                        leadingUnderscore: "allow",
+                        "selector": "memberLike",
+                        "modifiers": ["protected"],
+                        "format": ["camelCase"],
+                        "leadingUnderscore": "allow"
                     },
                     {
-                        selector: "parameter",
-                        format: ["camelCase"],
-                        leadingUnderscore: "allow"
+                        "selector": "parameter",
+                        "format": ["camelCase"],
+                        "leadingUnderscore": "allow"
                     },
                     {
-                        selector: "variable",
-                        format: ["camelCase", "UPPER_CASE"]
+                        "selector": "variable",
+                        "format": ["camelCase", "UPPER_CASE"]
                     },
                     {
-                        selector: "enumMember",
-                        format: ["camelCase", "UPPER_CASE"]
+                        "selector": "enumMember",
+                        "format": ["camelCase", "UPPER_CASE"]
                     },
                     {
-                        selector: "typeLike",
-                        format: ["PascalCase"]
+                        "selector": "typeLike",
+                        "format": ["PascalCase"]
                     },
                     /**
                      * Interfaces
@@ -196,14 +201,18 @@ module.exports = {
                      * "Interface" suffix is not allowed
                      */
                     {
-                        selector: "interface",
-                        format: ["PascalCase"],
-                        custom: {
-                            regex: "^I[A-Z]|Interface$",
-                            match: false,
-                        },
+                        "selector": "interface",
+                        "format": ["PascalCase"],
+                        "custom": {
+                            "regex": "^I[A-Z]|Interface$",
+                            "match": false
+                        }
                     },
-                ],
+                    {
+                        "selector": "objectLiteralProperty",
+                        "format": null
+                    }
+                ]
             }
         }
     ]
