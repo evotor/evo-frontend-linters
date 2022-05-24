@@ -1,8 +1,8 @@
 "use strict";
 
-module.exports = prettierConfigTs;
+module.exports = prettierConfigAngular;
 
-const prettierConfigTs = {
+const prettierConfigAngular = {
     $schema: "https://json.schemastore.org/prettierrc",
     files: ["*.ts"],
     parser: "typescript",
