@@ -1,2 +1,0 @@
-# `@evo/prettier-config-angular`
-

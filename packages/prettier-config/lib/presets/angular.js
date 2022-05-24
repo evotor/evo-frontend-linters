@@ -1,10 +1,24 @@
 "use strict";
 
-module.exports = prettierConfigAngular;
+module.exports = angular;
 
-const prettierConfigAngular = {
+const attributeGroups = [
+    // prettier-plugin-organize-attribute
+    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+    "$ANGULAR_ELEMENT_REF",
+    "$ID",
+    "$DEFAULT",
+    "$CLASS",
+    "$ANGULAR_ANIMATION",
+    "$ANGULAR_ANIMATION_INPUT",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_OUTPUT",
+];
+
+const angular = {
     $schema: "https://json.schemastore.org/prettierrc",
-    files: ["*.ts"],
+    files: ["*.ts", "*.component.html", "*.template.html"],
     parser: "typescript",
     htmlWhitespaceSensitivity: "ignore",
     printWidth: 120,
@@ -22,17 +36,5 @@ const prettierConfigAngular = {
         require.resolve("prettier-plugin-organize-attributes"),
         require.resolve("@prettier/plugin-xml"),
     ],
-    attributeGroups: [
-        // prettier-plugin-organize-attribute
-        "$ANGULAR_STRUCTURAL_DIRECTIVE",
-        "$ANGULAR_ELEMENT_REF",
-        "$ID",
-        "$DEFAULT",
-        "$CLASS",
-        "$ANGULAR_ANIMATION",
-        "$ANGULAR_ANIMATION_INPUT",
-        "$ANGULAR_INPUT",
-        "$ANGULAR_TWO_WAY_BINDING",
-        "$ANGULAR_OUTPUT",
-    ],
+    attributeGroups: attributeGroups,
 };
