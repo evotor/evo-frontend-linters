@@ -1,7 +1,5 @@
 "use strict";
 
-module.exports = angular;
-
 const attributeGroups = [
     // prettier-plugin-organize-attribute
     "$ANGULAR_STRUCTURAL_DIRECTIVE",
@@ -16,7 +14,7 @@ const attributeGroups = [
     "$ANGULAR_OUTPUT",
 ];
 
-const angular = {
+module.exports = {
     $schema: "https://json.schemastore.org/prettierrc",
     files: ["*.ts", "*.component.html", "*.template.html"],
     parser: "typescript",
