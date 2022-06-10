@@ -24,6 +24,12 @@ module.exports = {
                 bracketSpacing: true
             },
         },
+        {
+            files: ["*.component.html", "*.template.html"],
+            options: {
+                parser: "angular",
+            },
+        },
     ],
     htmlWhitespaceSensitivity: "ignore",
     printWidth: 120,
