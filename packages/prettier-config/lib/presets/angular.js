@@ -16,8 +16,15 @@ const attributeGroups = [
 
 module.exports = {
     $schema: "https://json.schemastore.org/prettierrc",
-    files: ["*.ts", "*.component.html", "*.template.html"],
-    parser: "typescript",
+    overrides: [
+        {
+            files: ["*.ts"],
+            options: {
+                parser: "typescript",
+                bracketSpacing: true
+            },
+        },
+    ],
     htmlWhitespaceSensitivity: "ignore",
     printWidth: 120,
     tabWidth: 4,
