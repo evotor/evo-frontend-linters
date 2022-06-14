@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/evotor/evo-frontend-linters/compare/@evo/eslint-config-ng@0.2.0...@evo/eslint-config-ng@0.2.1) (2022-06-14)
+
+**Note:** Version bump only for package @evo/eslint-config-ng
+
+
+
+
+
 # [0.2.0](https://github.com/evotor/evo-frontend-linters/compare/@evo/eslint-config-ng@0.1.4...@evo/eslint-config-ng@0.2.0) (2022-05-12)
 
 
