@@ -1,6 +1,6 @@
 {
   "name": "@evo/prettier-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Evotor prettier config for Typescript and Angular",
   "author": "andreymatveev <andrey.g.matveev@gmail.com>",
   "homepage": "https://github.com/evotor/evo-frontend-linters#readme",
