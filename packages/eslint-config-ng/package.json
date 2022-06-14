@@ -14,7 +14,7 @@
     "@angular-eslint/template-parser": ">= 12",
     "@typescript-eslint/eslint-plugin": ">= 4",
     "@typescript-eslint/parser": ">= 4",
-    "eslint": ">= 8",
+    "eslint": ">= 7",
     "eslint-config-prettier": ">= 8",
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-jsdoc": ">= 37",
