@@ -1,6 +1,6 @@
 {
   "name": "@evotor-dev/eslint-config-ng",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "author": "Andrey Matveev (https://andrey.dev)",
   "homepage": "https://github.com/evotor/evo-frontend-linters/tree/master/packages/eslint-config-ng#readme",
