@@ -1,10 +1,12 @@
 {
-  "name": "@evo/stylelint",
-  "version": "0.1.0",
+  "name": "@evotor-dev/stylelint",
+  "version": "0.4.0",
+  "author": "Andrey Matveev (https://andrey.dev)",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
-    "publish:private": "npm publish --registry http://npm.market.local"
+    "publish:private": "npm publish"
   },
+  "homepage": "https://github.com/evotor/evo-frontend-linters/tree/master/packages/stylelint#readme",
   "main": "index.js",
   "peerDependencies": {
     "stylelint": "14.3.0",
@@ -12,5 +14,9 @@
     "stylelint-config-standard": "24.0.0",
     "stylelint-order": "5.0.0",
     "stylelint-scss": "4.1.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "840e018f79b81a7635c2270dae5c0f4adbde2d2a"
 }

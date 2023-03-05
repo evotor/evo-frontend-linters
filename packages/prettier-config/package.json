@@ -1,10 +1,10 @@
 {
-  "name": "@evo/prettier-config",
-  "version": "2.0.0",
+  "name": "@evotor-dev/prettier-config",
+  "version": "2.3.0",
   "description": "Evotor prettier config for Typescript and Angular",
-  "author": "andreymatveev <andrey.g.matveev@gmail.com>",
-  "homepage": "https://github.com/evotor/evo-frontend-linters#readme",
-  "license": "ISC",
+  "author": "Andrey Matveev (https://andrey.dev)",
+  "homepage": "https://github.com/evotor/evo-frontend-linters/tree/master/packages/prettier-config#readme",
+  "license": "MIT",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -25,5 +25,9 @@
     "@types/prettier": "2.6.2",
     "prettier": "2.6.2",
     "prettier-plugin-organize-attributes": "0.0.5"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "840e018f79b81a7635c2270dae5c0f4adbde2d2a"
 }

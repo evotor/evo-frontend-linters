@@ -4,6 +4,8 @@
     "prepare": "husky install"
   },
   "private": true,
+  "license": "MIT",
+  "author": "Andrey Matveev (https://andrey.dev)",
   "peerDependencies": {
     "@angular-eslint/builder": ">= 12",
     "@angular-eslint/eslint-plugin": ">= 12",

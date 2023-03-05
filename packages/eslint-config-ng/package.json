@@ -1,6 +1,9 @@
 {
-  "name": "@evo/eslint-config-ng",
-  "version": "0.2.2",
+  "name": "@evotor-dev/eslint-config-ng",
+  "version": "0.5.0",
+  "license": "MIT",
+  "author": "Andrey Matveev (https://andrey.dev)",
+  "homepage": "https://github.com/evotor/evo-frontend-linters/tree/master/packages/eslint-config-ng#readme",
   "scripts": {
     "release": "./node_modules/.bin/semantic-release",
     "publish:private": "npm publish --registry http://npm.market.local"
@@ -21,5 +24,9 @@
     "eslint-plugin-prefer-arrow": "~1.2.2",
     "eslint-plugin-prettier": ">= 4",
     "typescript": ">= 4"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "840e018f79b81a7635c2270dae5c0f4adbde2d2a"
 }
