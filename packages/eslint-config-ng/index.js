@@ -153,7 +153,7 @@ module.exports = {
                     {
                         "selector": "classProperty",
                         "modifiers": ["readonly", "public"],
-                        "format": ["camelCase", "UPPER_CASE"]
+                        "format": ["camelCase", "UPPER_CASE", "PascalCase"],
                     },
                     /**
                      * Class properties and methods
