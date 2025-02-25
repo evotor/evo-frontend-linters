@@ -5,23 +5,6 @@
     "stylelint-scss"
   ],
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": [
-          "at-root",
-          "content",
-          "function",
-          "if",
-          "for",
-          "else",
-          "each",
-          "include",
-          "extend",
-          "mixin"
-        ]
-      }
-    ],
     "color-named": "never",
     "indentation": [
       4,
